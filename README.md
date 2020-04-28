@@ -2,7 +2,7 @@
 
 [![](https://images.microbadger.com/badges/version/pyguerder/bitbucket-pipelines-php74.svg)](https://microbadger.com/images/pyguerder/bitbucket-pipelines-php74 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/pyguerder/bitbucket-pipelines-php74.svg)](https://microbadger.com/images/pyguerder/bitbucket-pipelines-php74 "Get your own image badge on microbadger.com")
 
-## Based on Ubuntu 18.04
+## Based on Ubuntu 20.04
 
 ### Packages installed
 

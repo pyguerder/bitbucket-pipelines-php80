@@ -14,8 +14,9 @@ RUN echo "nameserver 1.1.1.1" | tee /etc/resolv.conf > /dev/null
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -y && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common && \
+    DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:ondrej/php && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    software-properties-common \
     git \
     ca-certificates \
     unzip \

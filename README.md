@@ -9,7 +9,7 @@
 - `php7.4-zip`, `php7.4-xml`, `php7.4-mbstring`, `php7.4-curl`, `php7.4-json`, `php7.4-imap`, `php7.4-mysql`, `php7.4-tokenizer`, `php7.4-xdebug`, `php7.4-intl`, `php7.4-soap`, `php7.4-pdo`, `php7.4-cli` and `php7.4-gd`
 - wget, curl, unzip
 - Composer
-- Mysql 5.7
+- Mysql 8 (or 5.7 if you use `pyguerder/bitbucket-pipelines-php74:mysql5`)
 - Node + Yarn
 
 ### Sample `bitbucket-pipelines.yml`

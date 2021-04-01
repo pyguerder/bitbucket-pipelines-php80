@@ -48,6 +48,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get clean -y && \
     apt-get autoremove -y && \
     apt-get autoclean -y && \
+    apt-get remove --purge -y php8.0 php8.0-common && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     rm /var/lib/mysql/ib_logfile*
 

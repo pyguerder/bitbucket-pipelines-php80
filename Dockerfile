@@ -56,6 +56,8 @@ ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 RUN locale-gen en_US.UTF-8
 
+COPY --from=composer /usr/bin/composer /usr/local/bin/composer
+
 # Timezone & memory limit
 RUN echo "date.timezone=Europe/Paris" > /etc/php/7.4/cli/conf.d/date_timezone.ini && echo "memory_limit=1G" >> /etc/php/7.4/apache2/php.ini
 

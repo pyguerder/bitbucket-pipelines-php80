@@ -2,11 +2,11 @@
 
 [![](https://images.microbadger.com/badges/version/pyguerder/bitbucket-pipelines-php74.svg)](https://microbadger.com/images/pyguerder/bitbucket-pipelines-php74 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/pyguerder/bitbucket-pipelines-php74.svg)](https://microbadger.com/images/pyguerder/bitbucket-pipelines-php74 "Get your own image badge on microbadger.com")
 
-## Based on Ubuntu 20.04
+## Based on Ubuntu 18.04
 
 ### Packages installed
 
-- `php7.4-zip`, `php7.4-xml`, `php7.4-mbstring`, `php7.4-curl`, `php7.4-json`, `php7.4-imap`, `php7.4-mysql`, `php7.4-tokenizer`, `php7.4-xdebug`, `php7.4-intl`, `php7.4-soap`, `php7.4-pdo`, `php7.4-cli` and `php7.4-gd`
+- `php7.4-zip`, `php7.4-xml`, `php7.4-mbstring`, `php7.4-curl`, `php7.4-json`, `php7.4-imap`, `php7.4-mysql`, `php7.4-tokenizer`, `php7.4-xdebug`, `php7.4-intl`, `php7.4-soap`, `php7.4-pdo`, `php7.4-cli`, `php7.4-apcu` and `php7.4-gd`
 - wget, curl, unzip
 - Composer
 - Mysql 8 (or 5.7 if you use `pyguerder/bitbucket-pipelines-php74:mysql5`)

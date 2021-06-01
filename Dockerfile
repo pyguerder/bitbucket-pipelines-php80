@@ -63,7 +63,7 @@ RUN locale-gen en_US.UTF-8
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 
 # Timezone & memory limit
-RUN echo "date.timezone=Europe/Paris" > /etc/php/8.0/cli/conf.d/date_timezone.ini && echo "memory_limit=1G" >> /etc/php/8.0/apache2/php.ini
+RUN mkdir -p /etc/php/8.0/cli/conf.d && echo "date.timezone=Europe/Paris" > /etc/php/8.0/cli/conf.d/date_timezone.ini && mkdir -p /etc/php/8.0/apache2 && echo "memory_limit=1G" >> /etc/php/8.0/apache2/php.ini
 
 # Goto temporary directory.
 WORKDIR /tmp

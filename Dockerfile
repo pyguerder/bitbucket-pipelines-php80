@@ -35,8 +35,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
-RUN add-apt-repository ppa:ondrej/php
-
 # Install packages
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
@@ -49,7 +47,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get clean -y && \
     apt-get autoremove -y && \
     apt-get autoclean -y && \
-    apt-get remove --purge -y php8.0 php8.0-common && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     rm /var/lib/mysql/ib_logfile*
 
@@ -63,7 +60,7 @@ RUN locale-gen en_US.UTF-8
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 
 # Timezone & memory limit
-RUN mkdir -p /etc/php/8.0/cli/conf.d && echo "date.timezone=Europe/Paris" > /etc/php/8.0/cli/conf.d/date_timezone.ini && mkdir -p /etc/php/8.0/apache2 && echo "memory_limit=1G" >> /etc/php/8.0/apache2/php.ini
+RUN echo "date.timezone=Europe/Paris" > /etc/php/8.0/cli/conf.d/date_timezone.ini && echo "memory_limit=1G" >> /etc/php/8.0/apache2/php.ini
 
 # Goto temporary directory.
 WORKDIR /tmp
